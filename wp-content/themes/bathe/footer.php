@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * @package my-plugin
+ */
+
+?>
+
 	</main>
 
 	<?php get_sidebar(); ?>
