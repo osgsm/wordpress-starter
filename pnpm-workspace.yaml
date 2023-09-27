@@ -1,0 +1,3 @@
+packages:
+  - 'wp-content/plugins/my-plugin'
+  - 'wp-content/themes/bathe'

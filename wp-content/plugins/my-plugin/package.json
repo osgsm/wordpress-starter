@@ -1,0 +1,12 @@
+{
+  "name": "my-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wp-scripts start --webpack-src-dir=blocks/wp/src --output-path=blocks/wp/build",
+    "build": "wp-scripts build --webpack-src-dir=blocks/wp/src --output-path=blocks/wp/build"
+  },
+  "author": "osgsm",
+  "license": "UNLICENSED",
+  "devDependencies": { "@wordpress/icons": "^9.33.0", "@wordpress/scripts": "^26.13.0", "bun-types": "^1.0.3" }
+}
