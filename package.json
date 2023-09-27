@@ -1,0 +1,27 @@
+{
+  "name": "wordpress-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "my-plugin": "pnpm --F my-plugin run dev",
+    "bathe": "pnpm --F bathe run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osgsm/wordpress-starter"
+  },
+  "packageManager": "pnpm@8.7.6",
+  "engines": {
+    "node": ">=18.17",
+    "npm": "Please use pnpm!",
+    "yarn": "Please use pnpm!",
+    "pnpm": ">=8.7.5"
+  },
+  "author": "osgsm",
+  "private": true,
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/osgsm/wordpress-starter/issues"
+  },
+  "homepage": "https://github.com/osgsm/wordpress-starter"
+}

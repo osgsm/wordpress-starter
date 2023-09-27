@@ -1,5 +1,4 @@
 local-xdebuginfo.php
-/package.json
 /yarn.lock
 wp-content/plugins/siteguard/really-simple-captcha/tmp/
 wp-content/plugins/show-current-template/
