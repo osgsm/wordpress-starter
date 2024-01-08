@@ -1,10 +1,13 @@
 <?php
 /**
- * Remove some admin menu.
+ * Customizations for admin
  *
  * @package my-plugin
  */
 
+/**
+ * Remove some admin menu
+ */
 add_action(
 	'admin_menu',
 	function () {
@@ -36,3 +39,31 @@ add_action(
 	},
 	99
 );
+
+/**
+ * Reorder admin menu
+ *
+ * @param array $menu_order The current order of the admin menu.
+ * @return array The new order of the admin menu.
+ */
+function my_plugin_menu_order( $menu_order ) {
+	if ( ! $menu_order ) {
+		return true;
+	}
+
+	return array(
+		...array_unique(
+			array(
+				'index.php', // Dashboard.
+				'separator1', // First separator.
+				'edit.php?post_type=page', // Pages.
+				'edit.php?post_type=news',
+				'edit.php?post_type=blog',
+				'upload.php', // Media.
+				...$menu_order,
+			)
+		),
+	);
+}
+add_filter( 'custom_menu_order', 'my_plugin_menu_order', 10, 1 );
+add_filter( 'menu_order', 'my_plugin_menu_order', 10, 1 );

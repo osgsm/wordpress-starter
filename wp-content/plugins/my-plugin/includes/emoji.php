@@ -1,6 +1,6 @@
 <?php
 /**
- * Disable script for emoji.
+ * Disable emoji
  *
  * @package my-plugin
  */
@@ -32,7 +32,7 @@ add_action(
 		add_filter(
 			'wp_resource_hints',
 			function ( $urls, $relation_type ) {
-				if ( 'dns-prefetch' == $relation_type ) {
+				if ( 'dns-prefetch' === $relation_type ) {
 					/** This filter is documented in wp-includes/formatting.php */
 					$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
 
