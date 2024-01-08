@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.primary-navigation {
+	@apply bg-white h-dvh overflow-auto px-8 fixed right-0 top-0 transition-all duration-200;
+}
+
+.primary-navigation[aria-expanded='true'] {
+	@apply overflow-hidden translate-x-0 visible;
+}
+
+.primary-navigation[aria-expanded='false'] {
+	@apply p-0 translate-x-full invisible w-0;
+}
+
+.primary-menu-container {
+	@apply max-h-[80dvh] my-8 overflow-y-auto;
+
+	ul {
+		@apply list-none;
+	}
+
+	li {
+		@apply my-1;
+	}
+
+	a {
+		@apply inline-block py-3 w-full;
+	}
+}
+
+.backdrop {
+	background: theme('colors.gray.900');
+	height: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition-duration: 0.4s;
+	transition-property: opacity, visibility;
+	transition-timing-function: ease;
+	width: 0;
+	z-index: -1;
+}
+
+[aria-expanded='true'] + .backdrop {
+	height: 100vh;
+	left: 0;
+	opacity: 0.75;
+	position: absolute;
+	top: 0;
+	visibility: visible;
+	width: 100%;
+	z-index: -1;
+}
+
+[aria-expanded='false'] + .backdrop {
+	opacity: 0;
+	visibility: hidden;
+}

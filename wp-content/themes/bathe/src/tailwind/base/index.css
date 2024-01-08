@@ -1,0 +1,4 @@
+/* stylelint-disable-next-line selector-no-qualifying-type */
+html.drawer-open {
+	overflow: hidden;
+}
