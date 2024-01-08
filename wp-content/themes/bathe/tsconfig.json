@@ -16,6 +16,6 @@
     "removeComments": false,
     "outDir": "assets/js"
   },
-  "include": ["src/js/**/*"],
+  "include": ["src/ts/**/*"],
   "exclude": ["node_modules"]
 }
