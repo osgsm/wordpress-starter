@@ -10,12 +10,12 @@
     "type": "git",
     "url": "https://github.com/osgsm/wordpress-starter"
   },
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.14.0",
   "engines": {
     "node": ">=18.17",
     "npm": "Please use pnpm!",
     "yarn": "Please use pnpm!",
-    "pnpm": ">=8.7.5"
+    "pnpm": ">=8.14.0"
   },
   "author": "osgsm",
   "private": true,
